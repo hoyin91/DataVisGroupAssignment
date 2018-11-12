@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/bootstrap-grid.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -72,17 +73,18 @@
                 <p class="w3-opacity" class="w3-round">Exploring the Temperature Distribution</p>
                 <p class="w3-justify">Hot plate and Cold plate visualize</p>
                 <div class="row">
-                    <div class="column">
+                    <div class="col-sm">
                         <img src="page/temperature/temp1.png" alt="temp1" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
                     </div>
-                    <div class="column">
+                    <div class="col-sm">
                         <img src="page/temperature/temp2.png" alt="temp2" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
                     </div>
-                    <div class="column">
+                    <div class="col-sm">
                         <img src="page/temperature/temp3.png" alt="temp3" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
                     </div>
-                    <div class="column">
-                        <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
+                    <div class="col-sm">
+                        <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%"
+                            onclick="expandImage(this, 'expandTemperature');">
                     </div>
                 </div>
                 <div class="container">
@@ -144,22 +146,22 @@
             <h2 class="w3-wide w3-center">Air Flow streamline visualization</h2>
             <p class="w3-opacity w3-center">Visualize using Paraview Streamtracer</p>
             <p class="w3-justify">
-                - Visualize the air flow using streamlines. <br/>
-                - The slice indicate the temperature. <br/>
-                - Use low resolution streamline to clearly show the airflow. <br/>
-                - Arrow show the direction of the airflow and size of the arrow is the velocity magnitude. <br/>
+                - Visualize the air flow using streamlines. <br />
+                - The slice indicate the temperature. <br />
+                - Use low resolution streamline to clearly show the airflow. <br />
+                - Arrow show the direction of the airflow and size of the arrow is the velocity magnitude. <br />
             </p>
             <div class="row">
-                <div class="column">
+                <div class="col-sm">
                     <img src="page/airflow_streamline/streamlines.png" alt="streamline1" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
                 </div>
-                <div class="column">
+                <div class="col-sm">
                     <img src="page/airflow_streamline/streamlines2.png" alt="streamline2" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
                 </div>
-                <div class="column">
+                <div class="col-sm">
                     <img src="page/airflow_streamline/streamlines3.png" alt="streamline3" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
                 </div>
-                <div class="column">
+                <div class="col-sm">
                     <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
                 </div>
             </div>

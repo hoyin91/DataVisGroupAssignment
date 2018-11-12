@@ -15,22 +15,21 @@ body {
     padding: 10px;
 }
 
-/* Style the images inside the grid */
-.column img {
-    opacity: 0.8; 
-    cursor: pointer; 
+.col-sm {
+    padding: 10px;
 }
 
-.column img:hover {
+/* Style the images inside the grid */
+.col-sm img {
+    opacity: 0.8; 
+    cursor: pointer;
+    height: 100%;
+}
+
+.col-sm img:hover {
     opacity: 1;
 }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 /* The expanding image container */
 .container {
