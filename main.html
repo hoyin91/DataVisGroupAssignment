@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+                onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+            <a href="#temperature" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Temperature</a>
+            <a href="#pressure" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Pressure</a>
+            <a href="#airflow" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Air Flow</a>
+            <a href="#airflow_streamline" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Streamline</a>
+            <a href="#discussion" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Discussion</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Combination <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#temperature-pressure" class="w3-bar-item w3-button">Temperature/Pressure</a>
+                    <a href="#temperature-airflow" class="w3-bar-item w3-button">Temeperature/Air Flow</a>
+                    <a href="#pressure-airflow" class="w3-bar-item w3-button">Pressure/Air Flow</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+        <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="home">
+            <h2 class="w3-opacity">Visualizing and Exploring Double Glazing Window</h2>
+            <p class="w3-justify">An engineer is studying the behaviour of air flow between two plates
+                where one plate is cold and the other is warm. This is the situation which could be
+                encountered with double glazing where the hot and cold plates are actually the two panes
+                of glass which trap the air inside. The figure below shows the two plates with the
+                temperature at the hot plate being one and the temperature at the cold plate being zero.
+                At either end of the closed system the temperature is held to constantly form a linear
+                temperature variation between the two plates. The experiment eventually reaches a steady
+                state and a symmetry plane exists in the middle. This is shown in the figure below:,</p>
+            <img src="page/home/dglazing-fig.png" style="width:100%">
+        </div>
+
+        <!-- The TEmperature Section -->
+        <div class="w3-black" id="temperature">
+            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="band">
+                <h2 class="w3-wide">Temperature distribution</h2>
+                <p class="w3-opacity" class="w3-round">Exploring the Temperature Distribution</p>
+                <p class="w3-justify">Hot plate and Cold plate visualize</p>
+                <div class="row">
+                    <div class="column">
+                        <img src="page/temperature/temp1.png" alt="temp1" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
+                    </div>
+                    <div class="column">
+                        <img src="page/temperature/temp2.png" alt="temp2" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
+                    </div>
+                    <div class="column">
+                        <img src="page/temperature/temp3.png" alt="temp3" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
+                    </div>
+                    <div class="column">
+                        <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
+                    </div>
+                </div>
+                <div class="container">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                    <img id="expandTemperature" style="width:100%">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- The Tour Section -->
+        <div class="" id="pressure">
+            <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+                <h2 class="w3-wide w3-center">Pressure</h2>
+                <p class="w3-opacity w3-center">Pressure visualization<br>
+                    <p class="w3-justify">Pressure visualization</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Contact Section -->
+    <div class="w3-black" id="airflow">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+            <h2 class="w3-wide w3-center">Air Flow</h2>
+            <p class="w3-opacity w3-center">Air flow visualization</p>
+            <p class="w3-justify">Air flow visualization</p>
+        </div>
+    </div>
+
+    <div class="" id="temperature-pressure">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+            <h2 class="w3-wide w3-center">Temperature vs Pressure</h2>
+            <p class="w3-opacity w3-center">visualization</p>
+            <p class="w3-justify">visualization</p>
+        </div>
+    </div>
+
+    <div class="w3-black" id="temperature-airflow">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+            <h2 class="w3-wide w3-center">Temperature vs AirFlow</h2>
+            <p class="w3-opacity w3-center">visualization</p>
+            <p class="w3-justify">visualization</p>
+        </div>
+    </div>
+
+    <div class="" id="pressure-airflow">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+            <h2 class="w3-wide w3-center">Pressure vs AirFlow</h2>
+            <p class="w3-opacity w3-center">visualization</p>
+            <p class="w3-justify">visualization</p>
+        </div>
+    </div>
+
+    <div class="w3-black" id="airflow_streamline">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+            <h2 class="w3-wide w3-center">Air Flow streamline visualization</h2>
+            <p class="w3-opacity w3-center">Visualize using Paraview Streamtracer</p>
+            <p class="w3-justify">
+                - Visualize the air flow using streamlines. <br/>
+                - The slice indicate the temperature. <br/>
+                - Use low resolution streamline to clearly show the airflow. <br/>
+                - Arrow show the direction of the airflow and size of the arrow is the velocity magnitude. <br/>
+            </p>
+            <div class="row">
+                <div class="column">
+                    <img src="page/airflow_streamline/streamlines.png" alt="streamline1" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
+                </div>
+                <div class="column">
+                    <img src="page/airflow_streamline/streamlines2.png" alt="streamline2" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
+                </div>
+                <div class="column">
+                    <img src="page/airflow_streamline/streamlines3.png" alt="streamline3" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
+                </div>
+                <div class="column">
+                    <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
+                </div>
+            </div>
+            <div class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandStreamline" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="" id="discussion">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+            <h2 class="w3-wide w3-center">Disussion and Conclusion</h2>
+            <p class="w3-opacity w3-center">conclusion</p>
+            <p class="w3-justify">conclusion</p>
+        </div>
+    </div>
+
+    <!-- End Page Content -->
+    </div>
+
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <p class="w3-medium">CDS505 Assignment 2: Visualizing and Exploring Double Glazing Window</p>
+        <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        function expandImage(imgs, expandArea) {
+            var expandImg = document.getElementById(expandArea);
+            //var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            //imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
