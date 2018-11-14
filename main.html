@@ -153,10 +153,10 @@
             </p>
             <div class="row">
                 <div class="col-sm">
-                    <img src="page/airflow_streamline/streamlines.png" alt="streamline1" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
+                    <img src="page/airflow_streamline/streamlinesx2.png" alt="streamline1" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
                 </div>
                 <div class="col-sm">
-                    <img src="page/airflow_streamline/streamlines2.png" alt="streamline2" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
+                    <img src="page/airflow_streamline/streamlinesy2.png" alt="streamline2" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
                 </div>
                 <div class="col-sm">
                     <img src="page/airflow_streamline/streamlines3.png" alt="streamline3" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
@@ -168,6 +168,7 @@
             <div class="container">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                 <img id="expandStreamline" style="width:100%">
+                <input type="range" value="2" min="1" max="3" id="sliderStreamline" onchange="imgSlide();">
             </div>
         </div>
     </div>
@@ -209,6 +210,7 @@
             expandImg.src = imgs.src;
             //imgText.innerHTML = imgs.alt;
             expandImg.parentElement.style.display = "block";
+
         }
 
         // When the user clicks anywhere outside of the modal, close it
@@ -217,6 +219,17 @@
             if (event.target == modal) {
                 modal.style.display = "none";
             }
+        }
+
+        function imgSlide(){
+            var slider = document.getElementById("sliderStreamline");
+            var img = document.getElementById("expandStreamline");
+            img.src = img.src.replaceAt(img.src.length - 5, slider.value);
+            console.log(img.src);
+        }
+
+        String.prototype.replaceAt=function(index, replacement) {
+            return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
         }
     </script>
 
