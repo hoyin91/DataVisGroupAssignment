@@ -35,14 +35,14 @@
             <a href="#airflow" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Air Flow</a>
             <a href="#airflow_streamline" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Streamline</a>
             <a href="#discussion" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Discussion</a>
-            <div class="w3-dropdown-hover w3-hide-small">
+            <!--<div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-padding-large w3-button" title="More">Combination <i class="fa fa-caret-down"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     <a href="#temperature-pressure" class="w3-bar-item w3-button">Temperature/Pressure</a>
                     <a href="#temperature-airflow" class="w3-bar-item w3-button">Temperature/Air Flow</a>
                     <a href="#pressure-airflow" class="w3-bar-item w3-button">Pressure/Air Flow</a>
                 </div>
-            </div>
+            </div-->
             <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
         </div>
     </div>
@@ -151,84 +151,6 @@
         </div>
     </div>
 
-    <div class="" id="temperature-pressure">
-        <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
-            <h2 class="w3-wide w3-center">Temperature vs Pressure</h2>
-            <p class="w3-opacity w3-center">visualization</p>
-            <p class="w3-justify">visualization</p>
-            <div class="row">
-                <div class="col-sm">
-                    <img src="page/temperature/temp1.png" alt="temp1" style="width:100%" onclick="expandImage(this, 'expandTemperaturePressure');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/temperature/temp2.png" alt="temp2" style="width:100%" onclick="expandImage(this, 'expandTemperaturePressure');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/temperature/temp3.png" alt="temp3" style="width:100%" onclick="expandImage(this, 'expandTemperaturePressure');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="expandImage(this, 'expandTemperaturePressure');">
-                </div>
-            </div>
-            <div class="container">
-                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                <img id="expandTemperaturePressure" style="width:100%">
-            </div>
-        </div>
-    </div>
-
-    <div class="w3-black" id="temperature-airflow">
-        <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
-            <h2 class="w3-wide w3-center">Temperature vs AirFlow</h2>
-            <p class="w3-opacity w3-center">visualization</p>
-            <p class="w3-justify">visualization</p>
-            <div class="row">
-                <div class="col-sm">
-                    <img src="page/temperature/temp1.png" alt="temp1" style="width:100%" onclick="expandImage(this, 'expandTemperatureAirflow');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/temperature/temp2.png" alt="temp2" style="width:100%" onclick="expandImage(this, 'expandTemperatureAirflow');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/temperature/temp3.png" alt="temp3" style="width:100%" onclick="expandImage(this, 'expandTemperatureAirflow');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="expandImage(this, 'expandTemperatureAirflow');">
-                </div>
-            </div>
-            <div class="container">
-                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                <img id="expandTemperatureAirflow" style="width:100%">
-            </div>
-        </div>
-    </div>
-
-    <div class="" id="pressure-airflow">
-        <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
-            <h2 class="w3-wide w3-center">Pressure vs AirFlow</h2>
-            <p class="w3-opacity w3-center">visualization</p>
-            <p class="w3-justify">visualization</p>
-            <div class="row">
-                <div class="col-sm">
-                    <img src="page/temperature/temp1.png" alt="temp1" style="width:100%" onclick="expandImage(this, 'expandPressureAirflow');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/temperature/temp2.png" alt="temp2" style="width:100%" onclick="expandImage(this, 'expandPressureAirflow');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/temperature/temp3.png" alt="temp3" style="width:100%" onclick="expandImage(this, 'expandPressureAirflow');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="expandImage(this, 'expandPressureAirflow');">
-                </div>
-            </div>
-            <div class="container">
-                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                <img id="expandPressureAirflow" style="width:100%">
-            </div>
-        </div>
-    </div>
-
     <div class="blue" id="airflow_streamline">
         <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
             <h2 class="w3-wide w3-center">Air Flow streamline visualization</h2>
@@ -239,6 +161,9 @@
                 - Use low resolution streamline to clearly show the airflow. <br />
                 - Arrow show the direction of the airflow <br />
                 - Size of arrow indicate the magnitude of the velocity <br />
+                - Uses two seed type to visualize the streamline, Point source and high resolution line.  <br/>
+                - <b>Point source</b>, seed at the middle of the data domain, visualize the airflow at the center. <br/>
+                - <b>High resolution line</b>, visualize the streamline from the start point to end point to the line <br/>
             </p>
             <div class="row">
                 <div class="col-sm">
