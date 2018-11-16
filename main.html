@@ -3,6 +3,8 @@
 <title>CDS505 - Visualizing and Exploring Double Glazing Window</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="slick//slick.css">
+<link rel="stylesheet" href="slick/slick-theme.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="css/custom.css">
 <link rel="stylesheet" href="css/bootstrap-grid.css">
@@ -19,6 +21,8 @@
 </style>
 
 <body>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.js"></script>
 
     <!-- Navbar -->
     <div class="w3-top">
@@ -89,7 +93,6 @@
                 </div>
                 <div class="container">
                     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                    <img id="expandTemperature" style="width:100%">
                 </div>
             </div>
 
@@ -153,7 +156,7 @@
             </p>
             <div class="row">
                 <div class="col-sm">
-                    <img src="page/airflow_streamline/streamlinesx2.png" alt="streamline1" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
+                    <img src="page/airflow_streamline/streamlinespoint1.png" alt="Point Source" style="width:100%" onclick="initSlick(this, 8, 'streamlineImgContainer');">
                 </div>
                 <div class="col-sm">
                     <img src="page/airflow_streamline/streamlinesy2.png" alt="streamline2" style="width:100%" onclick="expandImage(this, 'expandStreamline');">
@@ -168,7 +171,7 @@
             <div class="container">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                 <img id="expandStreamline" style="width:100%">
-                <input type="range" value="2" min="1" max="3" id="sliderStreamline" onchange="imgSlide();">
+                <div id="streamlineImgContainer"></div>
             </div>
         </div>
     </div>
@@ -204,13 +207,30 @@
             }
         }
 
-        function expandImage(imgs, expandArea) {
+        function expandImage(imgs, expandArea, sliderId, numImage) {
             var expandImg = document.getElementById(expandArea);
             //var imgText = document.getElementById("imgtext");
             expandImg.src = imgs.src;
             //imgText.innerHTML = imgs.alt;
             expandImg.parentElement.style.display = "block";
+        }
 
+        function initSlick(img, numImage, containerId){
+            var container = document.getElementById(containerId);
+            if ($('#'+containerId).hasClass('slick-initialized')){
+                $('#'+containerId).slick('unslick');
+                container.innerHTML = "";
+            }
+            container.parentElement.style.display = "block";
+            var imageSource = img.src;
+            for (i = 1; i <= numImage; i++){
+                console.log(i);
+                imageSource = imageSource.replaceAt(imageSource.length - 5, String(i));
+                //console.log(imageSource);
+                container.innerHTML += '<div><img src="'+ imageSource +'" style="width:100%"></div>'
+                console.log(imageSource);
+            }
+            $('#'+containerId).slick();
         }
 
         // When the user clicks anywhere outside of the modal, close it
@@ -221,9 +241,16 @@
             }
         }
 
-        function imgSlide(){
-            var slider = document.getElementById("sliderStreamline");
-            var img = document.getElementById("expandStreamline");
+        function initImgSlide(sliderId, numImage){
+            var slider = document.getElementById(sliderId);
+            console.log(sliderId);
+            slider.value = 1;
+            slider.min = 1;
+            slider.max = numImage;
+        }
+
+        function imgSlide(slider, imgId){
+            var img = document.getElementById(imgId);
             img.src = img.src.replaceAt(img.src.length - 5, slider.value);
             console.log(img.src);
         }
