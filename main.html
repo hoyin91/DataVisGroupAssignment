@@ -71,20 +71,31 @@
         </div>
 
         <!-- The TEmperature Section -->
-        <div class="w3-black" id="temperature">
+        <div class="blue" id="temperature">
             <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="band">
                 <h2 class="w3-wide">Temperature distribution</h2>
                 <p class="w3-opacity" class="w3-round">Exploring the Temperature Distribution</p>
-                <p class="w3-justify">Hot plate and Cold plate visualize</p>
+                <p class="w3-justify">
+                    Hot plate and Cold plate visualize <br />
+                    <b>Isosurface : </b><br />
+                    - Surface that represent points of constant value within a volume of space <br />
+                    - Varying the isovalue able to visualize the temperature <br />
+                    - Isovalue near to 1 is the hot side, 0.5 is warm and near to 0 is cold side. <br />
+                    - Animation vary the isovalue from 1 to 0 to indicate how to heat transfer from hot side to cold
+                    side. <br />
+                    - Color indicate the temperature. <br />
+                </p>
                 <div class="row">
                     <div class="col-sm">
-                        <img src="page/temperature/temp1.png" alt="temp1" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
+                        Temperature Plate:
+                        <img src="page/temperature/temp1.png" alt="temp1" style="width:100%" onclick="initSlick(this, 3, 'temperatureImgContainer', '');">
                     </div>
                     <div class="col-sm">
                         <img src="page/temperature/temp2.png" alt="temp2" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
                     </div>
                     <div class="col-sm">
-                        <img src="page/temperature/temp3.png" alt="temp3" style="width:100%" onclick="expandImage(this, 'expandTemperature');">
+                        Isosurface:
+                        <img src="page/temperature/isosurface1.png" alt="isosurface" style="width:100%" onclick="initSlick(this, 4, 'temperatureImgContainer', addAnimation('page/temperature/isosurface_animation.mp4'));">
                     </div>
                     <div class="col-sm">
                         <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%"
@@ -94,6 +105,7 @@
                 <div class="container">
                     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                     <img id="expandTemperature" style="width:100%">
+                    <div id="temperatureImgContainer"></div>
                 </div>
             </div>
 
@@ -287,10 +299,10 @@
             }
         }
 
-        function addAnimation(src){
+        function addAnimation(src) {
             html = ''
             html += '<div>'
-            html += '<video controls>' + '<source src="'+ src +'">' + '</video>'
+            html += '<video controls>' + '<source src="' + src + '">' + '</video>'
             html += '</div>'
             //console.log(html);
             return html
@@ -319,10 +331,11 @@
                 container.innerHTML += '<div><img src="' + imageSource + '" style="width:100%"></div>'
                 console.log(imageSource);
             }
-            container.innerHTML += animation;
+            if (animation != '')
+                container.innerHTML += animation;
             $('#' + containerId).slick({
                 adaptiveHeight: true,
-                dots : true
+                dots: true
             });
         }
 
