@@ -131,7 +131,7 @@
 
         </div>
     </div>
-<div class="w3-white" id="Pressure">
+    <div class="w3-white" id="Pressure">
         <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
             <h2 class="w3-wide w3-center">Pressure visualization</h2>
             <p class="w3-opacity w3-center">Visualize using Paraview Slice</p>
@@ -143,20 +143,19 @@
             <div class="row">
                 <div class="col-sm">
                     Temperature with relation to Pressure
-                    <img src="page/pressure/pressureslice_temp.png" alt="pressure_temp" style="width:100%"
+                    <img src="page/pressure/pressureslice_temp_1.png" alt="pressure_temp" style="width:100%"
                         onclick="initSlick(this, 1, 'PressureImgContainer', addAnimation('page/pressure/pressureNtemp.mp4'));">
                 </div>
                 <div class="col-sm">
                     Pressure with relation to Velocity Glyph and Temperature
-                    <img src="page/pressure/tempslice_pressure_velocityglyph.png" alt="pressure_velo" style="width:100%"
+                    <img src="page/pressure/tempslice_pressure_velocityglyph_1.png" alt="pressure_velo" style="width:100%"
                         onclick="initSlick(this, 1, 'PressureImgContainer', addAnimation('page/pressure/pressureNvelocity.mp4'));">
                 </div>
             </div>
             <div class="container">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                 <img id="expandPressure" style="width:100%">
-                <div id="PressureImgContainer">
-                </div>
+                <div id="PressureImgContainer"></div>
             </div>
         </div>
     </div>
