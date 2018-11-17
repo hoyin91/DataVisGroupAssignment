@@ -131,7 +131,7 @@
 
         </div>
     </div>
-<div class="w3-white" id="Pressure visualization">
+<div class="w3-white" id="Pressure">
         <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
             <h2 class="w3-wide w3-center">Pressure visualization</h2>
             <p class="w3-opacity w3-center">Visualize using Paraview Slice</p>
@@ -142,29 +142,20 @@
             </p>
             <div class="row">
                 <div class="col-sm">
-                    Point Source at Center:
-                    <img src="page/airflow_streamline/streamlinespoint1.png" alt="Point Source" style="width:100%"
-                        onclick="initSlick(this, 8, 'streamlineImgContainer', addAnimation('page/airflow_streamline/streamline_animation.mp4'));">
+                    Temperature with relation to Pressure
+                    <img src="page/pressure/pressureslice_temp.png" alt="pressure_temp" style="width:100%"
+                        onclick="initSlick(this, 1, 'PressureImgContainer', addAnimation('page/pressure/pressureNtemp.mp4'));">
                 </div>
                 <div class="col-sm">
-                    High Resolution Line:
-                    <img src="page/airflow_streamline/streamlines1.png" alt="High resolution line source" style="width:100%"
-                        onclick="initSlick(this, 2, 'streamlineImgContainer');">
-                </div>
-                <div class="col-sm">
-                    Air flow:
-                    <img src="page/airflow_streamline/airflow_1.png" alt="streamline3" style="width:100%" 
-                        onclick="initSlick(this, 5, 'streamlineImgContainer');">
-                </div>
-                <div class="col-sm">
-                    Dummy:
-                    <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="initSlick(this, 2, 'streamlineImgContainer');">
+                    Pressure with relation to Velocity Glyph and Temperature
+                    <img src="page/pressure/tempslice_pressure_velocityglyph.png" alt="pressure_velo" style="width:100%"
+                        onclick="initSlick(this, 1, 'PressureImgContainer', addAnimation('page/pressure/pressureNvelocity.mp4'));">
                 </div>
             </div>
             <div class="container">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                <img id="expandStreamline" style="width:100%">
-                <div id="streamlineImgContainer">
+                <img id="expandPressure" style="width:100%">
+                <div id="PressureImgContainer">
                 </div>
             </div>
         </div>
