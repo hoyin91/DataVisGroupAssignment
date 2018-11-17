@@ -114,19 +114,45 @@
             </div>
 
         </div>
-
-
-
-        <!-- The Tour Section -->
-        <div class="" id="pressure">
-            <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
-                <h2 class="w3-wide w3-center">Pressure</h2>
-                <p class="w3-opacity w3-center">Pressure visualization<br>
-                    <p class="w3-justify">Pressure visualization</p>
+    </div>
+<div class="w3-white" id="Pressure visualization">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+            <h2 class="w3-wide w3-center">Pressure visualization</h2>
+            <p class="w3-opacity w3-center">Visualize using Paraview Slice</p>
+            <p class="w3-justify">
+                - Visualize the pressure using slice. <br />
+                - The slice indicate the pressure. <br />
+                - Color of the slice indicate the pressure <br />
+            </p>
+            <div class="row">
+                <div class="col-sm">
+                    Point Source at Center:
+                    <img src="page/airflow_streamline/streamlinespoint1.png" alt="Point Source" style="width:100%"
+                        onclick="initSlick(this, 8, 'streamlineImgContainer', addAnimation('page/airflow_streamline/streamline_animation.mp4'));">
+                </div>
+                <div class="col-sm">
+                    High Resolution Line:
+                    <img src="page/airflow_streamline/streamlines1.png" alt="High resolution line source" style="width:100%"
+                        onclick="initSlick(this, 2, 'streamlineImgContainer');">
+                </div>
+                <div class="col-sm">
+                    Air flow:
+                    <img src="page/airflow_streamline/airflow_1.png" alt="streamline3" style="width:100%" 
+                        onclick="initSlick(this, 5, 'streamlineImgContainer');">
+                </div>
+                <div class="col-sm">
+                    Dummy:
+                    <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="initSlick(this, 2, 'streamlineImgContainer');">
+                </div>
+            </div>
+            <div class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandStreamline" style="width:100%">
+                <div id="streamlineImgContainer">
+                </div>
             </div>
         </div>
     </div>
-
 
     <!-- The Contact Section -->
     <div class="w3-black" id="airflow">
