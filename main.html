@@ -140,26 +140,18 @@
             </p>
             <div class="row">
                 <div class="col-sm">
-                    <img src="page/velocity/air_flow.png" alt="temp1" style="width:100%" onclick="expandImage(this, 'expandVelocity');">
+                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%"
+                        onclick="initSlick(this, 1, 'VelocityImgContainer', '');">
                 </div>
                 <div class="col-sm">
-                    <img src="page/velocity/temp2.png" alt="temp2" style="width:100%" onclick="expandImage(this, 'expandVelocity');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/velocity/temp3.png" alt="temp3" style="width:100%" onclick="expandImage(this, 'expandVelocity');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/velocity/streamlines4.png" alt="streamline4" style="width:100%" onclick="expandImage(this, 'expandVelocity');">
-                </div>
-                <div class="col-sm">
-                    Isosurface:
-                    <img src="page/velocity/isosurface1.png" alt="isosurface" style="width:100%" 
-                        onclick="initSlick(this, 5, 'AirflowImgContainer', addAnimation('page/velocity/velocityNglyph.mp4'));">
+                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%" 
+                        onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/velocityNglyph.mp4'));">
                 </div>
             </div>
             <div class="container">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                 <img id="expandVelocity" style="width:100%">
+                <div id="VelocityImgContainer"></div>
             </div>
         </div>
     </div>
