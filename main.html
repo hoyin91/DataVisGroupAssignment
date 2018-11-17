@@ -145,33 +145,36 @@
 
 
     <!-- The Contact Section -->
-    <div class="w3-black" id="airflow">
+    <div class="w3-black" id="Velocity">
         <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
             <h2 class="w3-wide w3-center">Air Flow</h2>
             <p class="w3-opacity w3-center">Air flow visualization</p>
             <p class="w3-justify">
+<<<<<<< HEAD
                 Observation: <br />
                 -
 
 
+=======
+                Observation: <br/>
+                - In this assignment, we tried to combinate 2 different data vis method in order to visualize on the flow of the velocity.
+                At first, we use glyph to indicate on the flow of the velocity. The magnitude of the velocity is indicated by the size and length of the arrow. As the size gets bigger, then velocity gets greater as well. However, it is not easy to look at the glyph as there are many point of arrow and it looks very messy. As Tufte's 3rd principles mentioned, the overly added 3D glyph is actually making it looks worse. Therefore, we reduced the sample point to 800 instead of 2000. This has greatly enhance on the visibility as the arrow are more distinct and easily observed. However, we are trying to use a slice for which taking input of magnitude with respect to the velocity. This slice of plane which slicing from Z-plane helps to cover up on the loss of the magnitude as we have reduced the data pointin earlier (3D Glyph). Combination of these two vis methods help us to better understand on the magnitude of the velocity.
+>>>>>>> 8281fc12743a8f6dab48ce7ad601c33d3e3c1c9c
             </p>
             <div class="row">
                 <div class="col-sm">
-                    <img src="page/velocity/air_flow.png" alt="temp1" style="width:100%" onclick="expandImage(this, 'expandAirflow');">
+                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%"
+                        onclick="initSlick(this, 1, 'VelocityImgContainer', '');">
                 </div>
                 <div class="col-sm">
-                    <img src="page/temperature/temp2.png" alt="temp2" style="width:100%" onclick="expandImage(this, 'expandAirflow');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/temperature/temp3.png" alt="temp3" style="width:100%" onclick="expandImage(this, 'expandAirflow');">
-                </div>
-                <div class="col-sm">
-                    <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="expandImage(this, 'expandAirflow');">
+                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%" 
+                        onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/velocityNglyph.mp4'));">
                 </div>
             </div>
             <div class="container">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                <img id="expandAirflow" style="width:100%">
+                <img id="expandVelocity" style="width:100%">
+                <div id="VelocityImgContainer"></div>
             </div>
         </div>
     </div>
