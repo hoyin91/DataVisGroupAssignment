@@ -77,6 +77,15 @@
                 <p class="w3-opacity" class="w3-round">Exploring the Temperature Distribution</p>
                 <p class="w3-justify">
                     Hot plate and Cold plate visualize <br />
+                    <b>Surface : </b><br />
+                    - Animation slide across x,z,z axis to show the temperature change across the axis<br />
+                    - When slide across x axis, there are 2 observation. First, the upper cavity 
+                    had higher temperature compare to lower cavity. <br/>
+                    - When slide across y axis, observe that the temperature distribution at y=0 and y=17 is the same.
+                    The lower temperature found at range 0 to 8.5. Higher temperature found at range 8.5 to 17. <br/>
+                    - At z=0 the temperature distribution at the top and bottom cavity is the same,
+                    and the temperature across the x-axis gradually decrease. When slide across the z-axis, the upper area of the plane
+                    increase in temperature and the lower area of the plane decrease in temperature. <br/>
                     <b>Isosurface : </b><br />
                     - Surface that represent points of constant value within a volume of space <br />
                     - Varying the isovalue able to visualize the temperature <br />
@@ -87,24 +96,29 @@
                 </p>
                 <div class="row">
                     <div class="col-sm">
-                        Surface:
-                        <img src="page/temperature/temperatureplate1.png" alt="temp1" style="width:100%" 
-                            onclick="initSlick(this, 1, 'temperatureImgContainer', '');">
+                        Surface X:
+                        <img src="page/temperature/slide_x1.png" alt="slidex" style="width:100%" 
+                            onclick="initSlick(this, 1, 'temperatureImgContainer', addAnimation('page/temperature/slicex_animation.mp4'));">
+                    </div>
+                    <div class="col-sm">
+                        Surface Y:
+                        <img src="page/temperature/slide_y1.png" alt="slidey" style="width:100%"
+                            onclick="initSlick(this, 1, 'temperatureImgContainer', addAnimation('page/temperature/slicey_animation.mp4'));">
+                    </div>
+                    <div class="col-sm">
+                        Surface Z:
+                        <img src="page/temperature/slide_z1.png" alt="streamline4" style="width:100%"
+                            onclick="initSlick(this, 3, 'temperatureImgContainer', addAnimation('page/temperature/slicez_animation.mp4'));">
                     </div>
                     <div class="col-sm">
                         Volume:
-                        <img src="page/temperature/temp_volume1.png" alt="temp2" style="width:100%" 
-                            onclick="initSlick(this, 1, 'temperatureImgContainer', '');">
+                        <img src="page/temperature/temp_volume1.png" alt="temp2" style="width:100%" onclick="initSlick(this, 1, 'temperatureImgContainer', '');">
                     </div>
                     <div class="col-sm">
                         Isosurface:
-                        <img src="page/temperature/isosurface1.png" alt="isosurface" style="width:100%" 
-                            onclick="initSlick(this, 5, 'temperatureImgContainer', addAnimation('page/temperature/isosurface_animation.mp4'));">
+                        <img src="page/temperature/isosurface1.png" alt="isosurface" style="width:100%" onclick="initSlick(this, 5, 'temperatureImgContainer', addAnimation('page/temperature/isosurface_animation.mp4'));">
                     </div>
-                    <div class="col-sm">
-                        <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%"
-                            onclick="initSlick(this, 1, 'temperatureImgContainer', '');">
-                    </div>
+
                 </div>
                 <div class="container">
                     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
@@ -134,10 +148,10 @@
             <h2 class="w3-wide w3-center">Air Flow</h2>
             <p class="w3-opacity w3-center">Air flow visualization</p>
             <p class="w3-justify">
-                Observation: <br/>
-                - 
+                Observation: <br />
+                -
 
-            
+
             </p>
             <div class="row">
                 <div class="col-sm">
@@ -177,19 +191,18 @@
             </p>
             <div class="row">
                 <div class="col-sm">
-                    Point Source at Center:
+                    Seed type: Point Source
                     <img src="page/airflow_streamline/streamlinespoint1.png" alt="Point Source" style="width:100%"
                         onclick="initSlick(this, 8, 'streamlineImgContainer', addAnimation('page/airflow_streamline/streamline_animation.mp4'));">
                 </div>
                 <div class="col-sm">
-                    High Resolution Line:
+                    Seed Type: High Resolution Line
                     <img src="page/airflow_streamline/streamlines1.png" alt="High resolution line source" style="width:100%"
                         onclick="initSlick(this, 2, 'streamlineImgContainer');">
                 </div>
                 <div class="col-sm">
                     Air flow:
-                    <img src="page/airflow_streamline/airflow_1.png" alt="streamline3" style="width:100%" 
-                        onclick="initSlick(this, 5, 'streamlineImgContainer');">
+                    <img src="page/airflow_streamline/airflow_1.png" alt="streamline3" style="width:100%" onclick="initSlick(this, 5, 'streamlineImgContainer');">
                 </div>
                 <div class="col-sm">
                     Dummy:
@@ -208,10 +221,27 @@
     <div class="" id="discussion">
         <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
             <h2 class="w3-wide w3-center">Disussion and Conclusion</h2>
-            <p class="w3-opacity w3-center">conclusion</p>
+            <!--<p class="w3-opacity w3-center">How temperature </p> -->
             <p class="w3-justify">
+                <b>How does the temperature vary ?</b> <br />
+                The temperature vary gradually from hot side to cold side, as show in the temperature plate. Follow by,
+                using volume representation, we observe that top cavity tend to be higher temperature
+                compare to the bottom cavity.
+                Other than that, we use isosurface to represent the change of the temperature across the plate,
+                the top side of the double glazing window tend to be higher temperature compare to the bottom side.
+                <br /><br />
+                <b>What is the pattern of the air flow ?</b><br />
+
+                <br /><br />
+                <b>Can you show how the temperature influences the direction of the flow ?</b><br />
+
+                <br/ <br />
+                <b>What advantages/disadvantages did you find when trying to use Paraview or OpenDX to visualise the
+                    data ?</b><br />
                 File: <br />
                 <a href="temperature.vtk" download>Temperature.vtk</a><br />
+
+                <br /><br />
                 <a href="pressure.vtk" download>Pressure.vtk</a><br />
                 <a href="velocity.vtk" download>Velocity.vtk</a><br />
             </p>
