@@ -65,7 +65,7 @@
         <div class="blue" id="temperature">
             <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="band">
                 <h2 class="w3-wide">Temperature distribution</h2>
-                <p class="w3-opacity" class="w3-round">Exploring the Temperature Distribution</p>
+                <p class="w3-opacity" class="w3-round">Exploring on the Temperature Distribution</p>
                 <p class="w3-justify">
                     Hot and Cold plate visualization <br />
                     <b>Surface : </b><br />
@@ -125,12 +125,12 @@
             <h2 class="w3-wide w3-center">Pressure visualization</h2>
             <p class="w3-opacity w3-center">Visualize using Paraview Slice</p>
             <p class="w3-justify">
-                - Visualize the pressure using slice. <br />
+                Observation: <br/>
+                - Visualize the pressure by using slice. <br />
                 - The slice indicate the pressure. <br />
                 - Color of the slice indicate the pressure <br />
                 - Use 3D isosurface to find out which region has the low and high pressure. <br/>
-                - Isosurface animation vary the isovalue from -0.19 to 0.36, to visualize region from low pressure to high pressure<br/>
-                
+                - Isosurface animation varies the isovalue from -0.19 to 0.36, to visualize region from low pressure to high pressure<br/>
             </p>
             <div class="row">
                 <div class="col-sm">
@@ -180,34 +180,44 @@
                 setting it to flow according to the orientation of the velocity. <br>
                 <br/>
                 As Tufte's 3rd principles mentioned, the overly added 3D glyph is actually making it looks
-                worse. Therefore, we reduced the sample point to 800 instead of 2000. This has greatly enhance on the
+                worse. Since we have alot of point and therefore, we reduced the sample point to 800 instead of 2000. This has greatly enhance on the
                 visibility as the arrow are more distinct and easily observed. <br/>
 
                 we are further deploy a slice which taking input of magnitude with respect to the velocity.  <br/>
                 This slice of plane which slicing from Z-plane helps to cover up on the loss of the magnitude as we have reduced the data pointin earlier (3D Glyph).
                 <br/>
                 Combination of these two vis methods help us to better understand on the magnitude of the velocity. <br/>
+                Rotating of those 3D will help us to better understand on the data structure. <br/>
+
+                <br/>
+                Figure Explanation:   <br/>
+                1) The initial data tried to tell on the flow of the velocity. However, there are too many points and it is hard to visualize on the data <br/>
+                2) The data is cleaned up by reducing the points and we can visual on the flow better. <br/>
+                3) Slice with respect to mangnitude of velocity showing the magnitude in z-axis from bottom to top. We can see how
+                   the magnitude changes and how to link it with the glyph arrow. <br/>
+                4) Combination of velocity with glyph arrow with high sample points. It is hard to visualize on the data as there are too much of information. <br/>
+                5) We further reduced the sample point from the last animation and combinate the velocity volume with glyph. The opacity of the volume is set to very low so that it doesn't block on the arrows. We further orient the 3D block to let user visualize more on the flow from each angle. <br/>
             </p>
             <div class="row">
                 <div class="col-sm">
-                    Glyph w.r.t velocity (Original)
+                    1) Glyph w.r.t velocity (Initial visualization)
                     <img src="page/velocity/Arrow_high_sample_point_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer');">
                 </div>
                 <div class="col-sm">
-                    Glyph w.r.t Magnitude of Velocity (Plain)
+                    2) Glyph w.r.t Magnitude of Velocity (Low sample points)
                     <img src="page/velocity/Glyph_arrow_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/Glyph_flow_1.mp4'));">
                 </div>
                 <div class="col-sm">
-                    Glyph w.r.t Magnitude of Velocity With Slice
+                    3) Glyph w.r.t Magnitude of Velocity With Slice
                     <img src="page/velocity/Arrow_slice_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/velocityNglyph.mp4'));">
                 </div>
             <div class="row">
                 <div class="col-sm">
-                    Glyph flow combined with Velocity Volume (Unprocessed data)
+                    4) Glyph flow combined with Velocity Volume (high sample points)
                     <img src="page/velocity/STNArrow_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/Glyph_combine_no_magnitude.mp4'));">
                 </div>
                 <div class="col-sm">
-                    Glyph flow combined with Velocity Volume
+                    5) Glyph flow combined with Velocity Volume
                     <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/Glyph_combine.mp4'));">
                 </div>
             </div>
@@ -225,10 +235,10 @@
             <p class="w3-opacity w3-center">Visualize using Paraview Streamtracer</p>
             <p class="w3-justify">
                 - Visualize the air flow using streamlines. <br />
-                - The slice indicate the temperature. <br />
-                - Arrow show the direction of the airflow <br />
-                - Size of arrow indicate the magnitude of the velocity <br />
-                - Uses two seed type to visualize the streamline, Point source and high resolution line. <br />
+                - The slice indicates on the temperature change. <br />
+                - Glyph of arrow tells on the direction of the airflow <br />
+                - Size of arrow indicates on the magnitude of the velocity <br />
+                - Uses two seed types to visualize the streamline, Point source and high resolution line. <br />
                 - <b>Point source</b>, seed at the middle of the data domain, visualize the airflow at the center. <br />
                 - <b>High resolution line</b>, visualize the streamline from the start point to end point to the line
                 <br />
@@ -275,8 +285,16 @@
                 of the airflow, glyph arrow is being used to display it. Other than that, magnitude of velocity is being derived from
                 the vector value using formula (magnitude = sqrt(x^2 + y^2 + z^2)) <br/>
 
+                <br/>
+                Tufte's four major categories in the principles of graph construction: <br/>
+                1) Clear vision <br/>
+                2) Clear understanding <br/>
+                3) Scales <br/>
+                4) General strategy <br/>
 
-
+                As the principles teaches well on how to make our data better visualized, we carefully derive and select on
+                the method to represent the data as concise as possible. Single isotopes during animation, Retaining the hot and cold plate 
+                during animation (reduced in opacity in order to prevent blockage) have been done.
 
 
                 <br/><br/>
