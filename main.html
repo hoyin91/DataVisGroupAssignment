@@ -32,7 +32,7 @@
             <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
             <a href="#temperature" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Temperature</a>
             <a href="#pressure" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Pressure</a>
-            <a href="#airflow" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Air Flow</a>
+            <a href="#Velocity" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Air Flow</a>
             <a href="#airflow_streamline" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Streamline</a>
             <a href="#discussion" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Discussion</a>
             <!--<div class="w3-dropdown-hover w3-hide-small">
@@ -46,15 +46,6 @@
             <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
         </div>
     </div>
-
-    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-        <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
-    </div>
-
     <!-- Page content -->
     <div class="w3-content" style="max-width:2000px;margin-top:46px">
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="home">
@@ -179,7 +170,6 @@
             <p class="w3-justify">
                 - Visualize the air flow using streamlines. <br />
                 - The slice indicate the temperature. <br />
-                - Use low resolution streamline to clearly show the airflow. <br />
                 - Arrow show the direction of the airflow <br />
                 - Size of arrow indicate the magnitude of the velocity <br />
                 - Uses two seed type to visualize the streamline, Point source and high resolution line. <br />
@@ -201,10 +191,6 @@
                 <div class="col-sm">
                     Air flow:
                     <img src="page/airflow_streamline/airflow_1.png" alt="streamline3" style="width:100%" onclick="initSlick(this, 5, 'streamlineImgContainer');">
-                </div>
-                <div class="col-sm">
-                    Dummy:
-                    <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="initSlick(this, 2, 'streamlineImgContainer');">
                 </div>
             </div>
             <div class="container">
@@ -236,10 +222,10 @@
                 <br/ <br />
                 <b>What advantages/disadvantages did you find when trying to use Paraview or OpenDX to visualise the
                     data ?</b><br />
+                The visualization tool use in this report is Paraview, the advantage of this tools compare to OpenDX is still under development
+                where OpenDX is no longer under development. This disadvantage of Paraview is we need to manually convert the .dat file to become .vtk file.
                 File: <br />
                 <a href="temperature.vtk" download>Temperature.vtk</a><br />
-
-                <br /><br />
                 <a href="pressure.vtk" download>Pressure.vtk</a><br />
                 <a href="velocity.vtk" download>Velocity.vtk</a><br />
             </p>
