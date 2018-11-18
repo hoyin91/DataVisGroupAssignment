@@ -67,28 +67,26 @@
                 <h2 class="w3-wide">Temperature distribution</h2>
                 <p class="w3-opacity" class="w3-round">Exploring the Temperature Distribution</p>
                 <p class="w3-justify">
-                    Hot plate and Cold plate visualize <br />
+                    Hot and Cold plate visualization <br />
                     <b>Surface : </b><br />
-                    - Animation slide across x,z,z axis to show the temperature change across the axis<br />
-                    - x-axis : When slide across x axis, there are 2 observation. First, the upper cavity
-                    had higher temperature compare to lower cavity. Second, the outer layer cool down faster
-                    compare to the inner part <br />
-                    - y-axis : When slide across y axis, observe that the temperature distribution at y=0 and y=17 is
+                    - Animation slide across x,y,z-axis to show the temperature change across the axis<br />
+                    - x-axis : When slide across x-axis, there are 2 phenomenal observed. First, the upper cavity
+                    have higher temperature as compared to lower cavity. Second, the outer layer cool down faster
+                    than the inner part <br />
+                    - y-axis : When the slice slides across y-axis, observed that the temperature distribution at y=0 and y=17 is
                     the same.
                     The lower temperature found at range 0 to 8.5. Higher temperature found at range 8.5 to 17. <br />
                     - z-axis : At z=0 the temperature distribution at the top and bottom cavity is the same,
-                    and the temperature across the x-axis gradually decrease. When slide across the z-axis, the upper
+                    and the temperature across the x-axis gradually decrease. When the slice slides across the z-axis, the upper
                     area of the plane
-                    increase in temperature and the lower area of the plane decrease in temperature. <br />
+                    increases in temperature and the lower area of the plane decrease in temperature. <br />
                     <br />
                     <b>Isosurface : </b><br />
-                    - Surface that represent points of constant value within a volume of space <br />
-                    - Varying the isovalue able to visualize the temperature <br />
-                    - Isovalue near to 1 is the hot side, 0.5 is warm and near to 0 is cold side. <br />
-                    - Animation vary the isovalue from 1 to 0 to indicate how the temperature vary from hot side to
-                    cold
-                    side. <br />
-                    - Color represent the temperature. <br />
+                    - Surface that represents point of constant value within a space of volume <br />
+                    - Varying the isovalue allows us to visualize on the temperature change<br />
+                    - Isovalue approximately close to value of 1 indicate of the hot area, 0.5 for warm while 0 is for the cold area. <br />
+                    - Animation vary the isovalue from range of 1 to 0 indicates how the temperature varies across from hot to cold <br />
+                    - Jet Color represents of the temperature. <br />
                 </p>
                 <div class="row">
                     <div class="col-sm">
@@ -284,25 +282,29 @@
                 <br/><br/>
                 <b>What advantages/disadvantages did you find when trying to use Paraview or OpenDX to visualise the
                     data ?</b><br />
+
+                Advantages: <br/>
                 The visualization tool use in this report is Paraview, the advantage of this tools compare to OpenDX is
                 still under development
-                where OpenDX is no longer under development. This disadvantage of Paraview is we need to manually
-                convert the .dat file to become .vtk file. <br/>
+                where OpenDX is no longer under development.
 
-                In this assignment, we've choosen Paraview as our tool to visualize on the data. There are multiple of advantages
-                of choosing Paraview as it has a set of rich feature which helps us to better visualize on the data. <br/>
+                In this assignment, we've chosen Paraview as our tool to visualize on the data. Generally, we found 
+                the tool is easy to learn and equiped with powerful features which help alot in visualization. <br/> <br/>
 
-                The visualization of Paraview is capable to handle structured (uniform rectilinear, non-uniform rectilinear, and curvilinear grids), unstructured, polygonal, image, multi-block and AMR data types. As all processing operations (filters) produce datasets. This allows the user to either further process the result of every operation or the results as a data file. For example, the user can extract a cut surface, reduce the number of points on this surface by masking and apply glyphs (i.e. vector arrows) to the result.  <br/> 
-                
+                i) Paraview is capable to handle various type of data type such as structured, unstructured, polygonal, image, multi-block and AMR data. All processing operations (filters) will produce datasets and this allows user to either further process the result of every operation or the results as a data file. For example, user can extract a cut surface, reduce the number of points on the surface by masking and apply glyphs to the result. This has been demostrated on above.  <br/> 
                 </b>
-                Vectors fields can be inspected by applying glyphs (arrows, cones, lines, spheres, and various 2D glyphs) to the points in a dataset. The glyphs can be scaled by scalars, vector component or vector magnitude and can be oriented using a vector field.
-                Contours and isosurfaces can be extracted from all data types using scalars or vector components. The results can be colored by any other variable or processed further. When possible, structured data contours/isosurfaces are extracted with fast and efficient algorithms which make use of the efficient data layout. <br/>
 
-                A sub-region of a dataset can be extracted by cutting or clipping with an arbitrary plane (all data types), specifying a threshold criteria to exclude cells (all data types) and/or specifying a VOI (volume of interest - structured data types only).
-                Streamlines can be generated using constant step or adaptive integrators. The results can be displayed as points, lines, tubes, ribbons, etc., and can be processed by a multitude of filters. <br/>
+                ii) Paraview also handles vector fields well. User can inspect on the vectors field by applying glyphs (arrow in this assignment) to the points in a dataset. The glyphs can be scaled by scalars, vector component or vector magnitude and can be oriented using a vector field. In this assignment, we scaled it by the vector mangnitude and it help to tell very on the flow and orientation well. Contours and isosurfaces can be extracted from all data types using scalars or vector components. The results can be colored by any other variable or processed further. When possible, structured data contours/isosurfaces are extracted with fast and efficient algorithms which make use of the efficient data layout. <br/>
 
-                Other than the visulization capability, Paraview also provide a very good User Interaction (UI) for user to navigate and inspect on the data as it has intuitive and flexible interface based on the Qt application framework. This allows user to change on the parameters of many filters by directly interacting with the 3D view using 3D widgets (manipulators). For example, the user can manipulate the seed line of a streamline filter by clicking on a control point and dragging the line to the new location. Besides, the inteface design of Paraview is user friendly as all important tools are located in the main window and this has greatly eliminated the need for large number of windows which are often difficult to locate on a cluttered desktop. It is also possible to shear off inspectors from the main window.
-                Paraview also maintains interactive frame rates even when working with large data through the use of level-of-detail (LOD) models. The user determines the threshold (number of points) beyond which a reduced version of the model is displayed during interaction (the size of the model can also be adjusted). Once the interaction is over, the large model is rendered. <br/>
+                iii) Other than the powerful visulization capability, Paraview also provides a very good User Interaction (UI) for user to navigate and inspect on the data as it has intuitive and flexible interface based on the Qt application framework. This allows user to change on the parameters of many filters by directly interacting with the 3D view using 3D widgets (manipulators).
+                <br/>
+
+                iv) The inteface design of Paraview is user friendly as all important tools are located in the main window and this has greatly eliminated the need for large number of windows which are often difficult to locate on a cluttered desktop. It is also possible to shear off inspectors from the main window. <br/>
+
+                <br/>
+                Disadvantages: <br/>
+                The only disadvantage of Paraview that we encountered during this assignment is there is a need to manually
+                convert the .dat file to become .vtk file. <br/> <br/>
 
                 File: <br />
                 <a href="temperature.vtk" download>Temperature.vtk</a><br />
