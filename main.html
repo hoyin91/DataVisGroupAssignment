@@ -32,7 +32,7 @@
             <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
             <a href="#temperature" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Temperature</a>
             <a href="#pressure" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Pressure</a>
-            <a href="#airflow" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Air Flow</a>
+            <a href="#Velocity" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Air Flow</a>
             <a href="#airflow_streamline" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Streamline</a>
             <a href="#discussion" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Discussion</a>
             <!--<div class="w3-dropdown-hover w3-hide-small">
@@ -46,15 +46,6 @@
             <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
         </div>
     </div>
-
-    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-        <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
-    </div>
-
     <!-- Page content -->
     <div class="w3-content" style="max-width:2000px;margin-top:46px">
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="home">
@@ -79,38 +70,38 @@
                     Hot plate and Cold plate visualize <br />
                     <b>Surface : </b><br />
                     - Animation slide across x,z,z axis to show the temperature change across the axis<br />
-                    - x-axis : When slide across x axis, there are 2 observation. First, the upper cavity 
-                    had higher temperature compare to lower cavity. Second, the outer layer cool down faster 
-                    compare to the inner part <br/>
-                    - y-axis : When slide across y axis, observe that the temperature distribution at y=0 and y=17 is the same.
-                    The lower temperature found at range 0 to 8.5. Higher temperature found at range 8.5 to 17. <br/>
+                    - x-axis : When slide across x axis, there are 2 observation. First, the upper cavity
+                    had higher temperature compare to lower cavity. Second, the outer layer cool down faster
+                    compare to the inner part <br />
+                    - y-axis : When slide across y axis, observe that the temperature distribution at y=0 and y=17 is
+                    the same.
+                    The lower temperature found at range 0 to 8.5. Higher temperature found at range 8.5 to 17. <br />
                     - z-axis : At z=0 the temperature distribution at the top and bottom cavity is the same,
-                    and the temperature across the x-axis gradually decrease. When slide across the z-axis, the upper area of the plane
-                    increase in temperature and the lower area of the plane decrease in temperature. <br/>
-                    <br/>
+                    and the temperature across the x-axis gradually decrease. When slide across the z-axis, the upper
+                    area of the plane
+                    increase in temperature and the lower area of the plane decrease in temperature. <br />
+                    <br />
                     <b>Isosurface : </b><br />
                     - Surface that represent points of constant value within a volume of space <br />
                     - Varying the isovalue able to visualize the temperature <br />
                     - Isovalue near to 1 is the hot side, 0.5 is warm and near to 0 is cold side. <br />
-                    - Animation vary the isovalue from 1 to 0 to indicate how the temperature vary from hot side to cold
+                    - Animation vary the isovalue from 1 to 0 to indicate how the temperature vary from hot side to
+                    cold
                     side. <br />
                     - Color represent the temperature. <br />
                 </p>
                 <div class="row">
                     <div class="col-sm">
                         Surface X:
-                        <img src="page/temperature/slide_x1.png" alt="slidex" style="width:100%" 
-                            onclick="initSlick(this, 1, 'temperatureImgContainer', addAnimation('page/temperature/slicex_animation.mp4'));">
+                        <img src="page/temperature/slide_x1.png" alt="slidex" style="width:100%" onclick="initSlick(this, 1, 'temperatureImgContainer', addAnimation('page/temperature/slicex_animation.mp4'));">
                     </div>
                     <div class="col-sm">
                         Surface Y:
-                        <img src="page/temperature/slide_y1.png" alt="slidey" style="width:100%"
-                            onclick="initSlick(this, 1, 'temperatureImgContainer', addAnimation('page/temperature/slicey_animation.mp4'));">
+                        <img src="page/temperature/slide_y1.png" alt="slidey" style="width:100%" onclick="initSlick(this, 1, 'temperatureImgContainer', addAnimation('page/temperature/slicey_animation.mp4'));">
                     </div>
                     <div class="col-sm">
                         Surface Z:
-                        <img src="page/temperature/slide_z1.png" alt="streamline4" style="width:100%"
-                            onclick="initSlick(this, 3, 'temperatureImgContainer', addAnimation('page/temperature/slicez_animation.mp4'));">
+                        <img src="page/temperature/slide_z1.png" alt="streamline4" style="width:100%" onclick="initSlick(this, 3, 'temperatureImgContainer', addAnimation('page/temperature/slicez_animation.mp4'));">
                     </div>
                     <div class="col-sm">
                         Volume:
@@ -131,7 +122,7 @@
 
         </div>
     </div>
-    <div class="w3-white" id="Pressure">
+    <div class="light-blue" id="Pressure">
         <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
             <h2 class="w3-wide w3-center">Pressure visualization</h2>
             <p class="w3-opacity w3-center">Visualize using Paraview Slice</p>
@@ -139,17 +130,24 @@
                 - Visualize the pressure using slice. <br />
                 - The slice indicate the pressure. <br />
                 - Color of the slice indicate the pressure <br />
+                - Use 3D isosurface to find out which region has the low and high pressure. <br/>
+                - Isosurface animation vary the isovalue from -0.19 to 0.36, to visualize region from low pressure to high pressure<br/>
+                
             </p>
             <div class="row">
                 <div class="col-sm">
                     Temperature with relation to Pressure
-                    <img src="page/pressure/pressureslice_temp_1.png" alt="pressure_temp" style="width:100%"
-                        onclick="initSlick(this, 1, 'PressureImgContainer', addAnimation('page/pressure/pressureNtemp.mp4'));">
+                    <img src="page/pressure/pressureslice_temp_1.png" alt="pressure_temp" style="width:100%" onclick="initSlick(this, 1, 'PressureImgContainer', addAnimation('page/pressure/pressureNtemp.mp4'));">
                 </div>
                 <div class="col-sm">
                     Pressure with relation to Velocity Glyph and Temperature
                     <img src="page/pressure/tempslice_pressure_velocityglyph_1.png" alt="pressure_velo" style="width:100%"
                         onclick="initSlick(this, 1, 'PressureImgContainer', addAnimation('page/pressure/pressureNvelocity.mp4'));">
+                </div>
+                <div class="col-sm">
+                    Isosurface
+                    <img src="page/pressure/pressure_isosurface_1.png" alt="pressure_velo" style="width:100%"
+                        onclick="initSlick(this, 1, 'PressureImgContainer', addAnimation('page/pressure/pressure_isosurfce.mp4'));">
                 </div>
             </div>
             <div class="container">
@@ -161,23 +159,31 @@
     </div>
 
     <!-- The Contact Section -->
-    <div class="w3-black" id="Velocity">
+    <div class="blue" id="Velocity">
         <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
             <h2 class="w3-wide w3-center">Air Flow</h2>
             <p class="w3-opacity w3-center">Air flow visualization</p>
             <p class="w3-justify">
-                Observation: <br/>
-                - In this assignment, we tried to combinate 2 different data vis method in order to visualize on the flow of the velocity.
-                At first, we use glyph to indicate on the flow of the velocity. The magnitude of the velocity is indicated by the size and length of the arrow. As the size gets bigger, then velocity gets greater as well. However, it is not easy to look at the glyph as there are many point of arrow and it looks very messy. As Tufte's 3rd principles mentioned, the overly added 3D glyph is actually making it looks worse. Therefore, we reduced the sample point to 800 instead of 2000. This has greatly enhance on the visibility as the arrow are more distinct and easily observed. However, we are trying to use a slice for which taking input of magnitude with respect to the velocity. This slice of plane which slicing from Z-plane helps to cover up on the loss of the magnitude as we have reduced the data pointin earlier (3D Glyph). Combination of these two vis methods help us to better understand on the magnitude of the velocity.
+                Observation: <br />
+                - In this assignment, we tried to combinate 2 different data vis method in order to visualize on the
+                flow of the velocity.
+                At first, we use glyph to indicate on the flow of the velocity. The magnitude of the velocity is
+                indicated by the size and length of the arrow. As the size gets bigger, then velocity gets greater as
+                well. However, it is not easy to look at the glyph as there are many point of arrow and it looks very
+                messy. As Tufte's 3rd principles mentioned, the overly added 3D glyph is actually making it looks
+                worse. Therefore, we reduced the sample point to 800 instead of 2000. This has greatly enhance on the
+                visibility as the arrow are more distinct and easily observed. However, we are trying to use a slice
+                for which taking input of magnitude with respect to the velocity. This slice of plane which slicing
+                from Z-plane helps to cover up on the loss of the magnitude as we have reduced the data pointin earlier
+                (3D Glyph). Combination of these two vis methods help us to better understand on the magnitude of the
+                velocity.
             </p>
             <div class="row">
                 <div class="col-sm">
-                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%"
-                        onclick="initSlick(this, 1, 'VelocityImgContainer', '');">
+                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', '');">
                 </div>
                 <div class="col-sm">
-                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%" 
-                        onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/velocityNglyph.mp4'));">
+                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/velocityNglyph.mp4'));">
                 </div>
             </div>
             <div class="container">
@@ -188,14 +194,13 @@
         </div>
     </div>
 
-    <div class="blue" id="airflow_streamline">
+    <div class="light-blue" id="airflow_streamline">
         <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
             <h2 class="w3-wide w3-center">Air Flow streamline visualization</h2>
             <p class="w3-opacity w3-center">Visualize using Paraview Streamtracer</p>
             <p class="w3-justify">
                 - Visualize the air flow using streamlines. <br />
                 - The slice indicate the temperature. <br />
-                - Use low resolution streamline to clearly show the airflow. <br />
                 - Arrow show the direction of the airflow <br />
                 - Size of arrow indicate the magnitude of the velocity <br />
                 - Uses two seed type to visualize the streamline, Point source and high resolution line. <br />
@@ -218,10 +223,6 @@
                     Air flow:
                     <img src="page/airflow_streamline/airflow_1.png" alt="streamline3" style="width:100%" onclick="initSlick(this, 5, 'streamlineImgContainer');">
                 </div>
-                <div class="col-sm">
-                    Dummy:
-                    <img src="page/airflow_streamline/streamlines4.png" alt="streamline4" style="width:100%" onclick="initSlick(this, 2, 'streamlineImgContainer');">
-                </div>
             </div>
             <div class="container">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
@@ -234,28 +235,34 @@
 
     <div class="" id="discussion">
         <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
-            <h2 class="w3-wide w3-center">Disussion and Conclusion</h2>
+            <h2 class="w3-wide w3-center">Disussion</h2>
             <!--<p class="w3-opacity w3-center">How temperature </p> -->
             <p class="w3-justify">
-                <b>How does the temperature vary ?</b> <br />
-                The temperature vary gradually from hot side to cold side, as show in the temperature plate. Follow by,
-                using volume representation, we observe that top cavity tend to be higher temperature
-                compare to the bottom cavity.
-                Other than that, we use isosurface to represent the change of the temperature across the plate,
-                the top side of the double glazing window tend to be higher temperature compare to the bottom side.
-                <br /><br />
-                <b>What is the pattern of the air flow ?</b><br />
+                This visualization design objective is to find out <br/>
+                - How the <a href="#temperature">temperature distribution</a> in a double glazing glass? <br/>
+                - How <a href="#Pressure">pressure</a> vary in a double glazing glass ? <br/>
+                - Pattern of <a href="#Velocity">airflow</a> <br />
+                - Relationship between <a href="#Velocity">airflow and temperature</a> <br/>
+                - Airflow <a href="#airflow_streamline">streamlime</a><br/><br/>
 
-                <br /><br />
-                <b>Can you show how the temperature influences the direction of the flow ?</b><br />
+                Pressure and temperature is scalar and quantitative value, thus can direct represent it 
+                using color. For velocity data, it is a vector and quantitative value, in order to represent the direction
+                of the airflow, glyph arrow is being used to display it. Other than that, magnitude of velocity is being derived from
+                the vector value using formula (magnitude = sqrt(x^2 + y^2 + z^2)) <br/>
 
-                <br/ <br />
+
+
+
+
+                <br/><br/>
                 <b>What advantages/disadvantages did you find when trying to use Paraview or OpenDX to visualise the
                     data ?</b><br />
+                The visualization tool use in this report is Paraview, the advantage of this tools compare to OpenDX is
+                still under development
+                where OpenDX is no longer under development. This disadvantage of Paraview is we need to manually
+                convert the .dat file to become .vtk file.
                 File: <br />
                 <a href="temperature.vtk" download>Temperature.vtk</a><br />
-
-                <br /><br />
                 <a href="pressure.vtk" download>Pressure.vtk</a><br />
                 <a href="velocity.vtk" download>Velocity.vtk</a><br />
             </p>
@@ -267,7 +274,6 @@
     <!-- Footer -->
     <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
         <p class="w3-medium">CDS505 Assignment 2: Visualizing and Exploring Double Glazing Window</p>
-        <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </footer>
 
     <script>
