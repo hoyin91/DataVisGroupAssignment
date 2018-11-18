@@ -180,10 +180,25 @@
             </p>
             <div class="row">
                 <div class="col-sm">
-                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', '');">
+                    Glyph w.r.t Magnitude of Velocity (Plain)
+                    <img src="page/velocity/Arrow_high_sample_point_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer');">
                 </div>
                 <div class="col-sm">
-                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/velocityNglyph.mp4'));">
+                    Glyph w.r.t Magnitude of Velocity (Plain)
+                    <img src="page/velocity/Glyph_arrow_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/Glyph_flow_1.mp4'));">
+                </div>
+                <div class="col-sm">
+                    Glyph w.r.t Magnitude of Velocity With Slice
+                    <img src="page/velocity/Arrow_slice_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/velocityNglyph.mp4'));">
+                </div>
+            <div class="row">
+                <div class="col-sm">
+                    Glyph flow combined with Velocity Volume (Unprocessed data)
+                    <img src="page/velocity/STNArrow_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/Glyph_combine_no_magnitude.mp4'));">
+                </div>
+                <div class="col-sm">
+                    Glyph flow combined with Velocity Volume
+                    <img src="page/velocity/air_flow_1.png" alt="velo1" style="width:100%" onclick="initSlick(this, 1, 'VelocityImgContainer', addAnimation('page/velocity/Glyph_combine.mp4'));">
                 </div>
             </div>
             <div class="container">
@@ -260,7 +275,23 @@
                 The visualization tool use in this report is Paraview, the advantage of this tools compare to OpenDX is
                 still under development
                 where OpenDX is no longer under development. This disadvantage of Paraview is we need to manually
-                convert the .dat file to become .vtk file.
+                convert the .dat file to become .vtk file. <br/>
+
+                In this assignment, we've choosen Paraview as our tool to visualize on the data. There are multiple of advantages
+                of choosing Paraview as it has a set of rich feature which helps us to better visualize on the data. <br/>
+
+                The visualization of Paraview is capable to handle structured (uniform rectilinear, non-uniform rectilinear, and curvilinear grids), unstructured, polygonal, image, multi-block and AMR data types. As all processing operations (filters) produce datasets. This allows the user to either further process the result of every operation or the results as a data file. For example, the user can extract a cut surface, reduce the number of points on this surface by masking and apply glyphs (i.e. vector arrows) to the result.  <br/> 
+                
+                </b>
+                Vectors fields can be inspected by applying glyphs (arrows, cones, lines, spheres, and various 2D glyphs) to the points in a dataset. The glyphs can be scaled by scalars, vector component or vector magnitude and can be oriented using a vector field.
+                Contours and isosurfaces can be extracted from all data types using scalars or vector components. The results can be colored by any other variable or processed further. When possible, structured data contours/isosurfaces are extracted with fast and efficient algorithms which make use of the efficient data layout. <br/>
+
+                A sub-region of a dataset can be extracted by cutting or clipping with an arbitrary plane (all data types), specifying a threshold criteria to exclude cells (all data types) and/or specifying a VOI (volume of interest - structured data types only).
+                Streamlines can be generated using constant step or adaptive integrators. The results can be displayed as points, lines, tubes, ribbons, etc., and can be processed by a multitude of filters. <br/>
+
+                Other than the visulization capability, Paraview also provide a very good User Interaction (UI) for user to navigate and inspect on the data as it has intuitive and flexible interface based on the Qt application framework. This allows user to change on the parameters of many filters by directly interacting with the 3D view using 3D widgets (manipulators). For example, the user can manipulate the seed line of a streamline filter by clicking on a control point and dragging the line to the new location. Besides, the inteface design of Paraview is user friendly as all important tools are located in the main window and this has greatly eliminated the need for large number of windows which are often difficult to locate on a cluttered desktop. It is also possible to shear off inspectors from the main window.
+                Paraview also maintains interactive frame rates even when working with large data through the use of level-of-detail (LOD) models. The user determines the threshold (number of points) beyond which a reduced version of the model is displayed during interaction (the size of the model can also be adjusted). Once the interaction is over, the large model is rendered. <br/>
+
                 File: <br />
                 <a href="temperature.vtk" download>Temperature.vtk</a><br />
                 <a href="pressure.vtk" download>Pressure.vtk</a><br />
